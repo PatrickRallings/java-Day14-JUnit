@@ -36,6 +36,21 @@ class TransferTest {
         t.send();
         double postTransferCombinedBalance= t.getSender().getBalance()+t.getReceiver().getBalance();
         assertEquals(preTransferCombinedBalance, postTransferCombinedBalance);
+    }
 
+    @Test
+    @DisplayName("Checking sender's balance has decreased by the transfer amount")
+    void checkingSenderPostBalance(){
+        double preTransferSenderBalance= t.getSender().getBalance();
+        t.send();;
+        assertEquals(preTransferSenderBalance - t.getAmount(), t.getSender().getBalance());
+    }
+
+    @Test
+    @DisplayName("Checking receiver's balance has increased by the transfer amount")
+    void checkingReceiverPostBalance(){
+        double preTransferReceiverBalance= t.getReceiver().getBalance();
+        t.send();;
+        assertEquals(preTransferReceiverBalance + t.getAmount(), t.getReceiver().getBalance());
     }
 }
