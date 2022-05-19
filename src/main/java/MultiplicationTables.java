@@ -6,11 +6,13 @@ public class MultiplicationTables {
         double inputNum = MultiplicationTables.scanner();
         MultiplicationTables.loop(inputNum);
     }
-    public static void loop(double inputNum) {
+    public static String loop(double inputNum) {
+        String nums = "";
         System.out.println("User input the number "+inputNum);
         for (int i = 1; i <= 10; i++) {
-            System.out.println(inputNum+" * "+i+" = "+(inputNum * i));
+            nums += (inputNum * i)+"\n";
         }
+        return nums;
     }
     public static double scanner() {
         Scanner scan = new Scanner(System.in);

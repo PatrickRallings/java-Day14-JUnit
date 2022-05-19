@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CountToElevenTest {
-
     @Test
     @DisplayName("Makes sure the output counts to 11.0 when starting at 9.0")
     void checkCountingFromNine() {
