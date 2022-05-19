@@ -14,6 +14,7 @@ class BankAccountTest {
         assertNotNull(ba.getName());
         assertNotNull(ba.getBalance());
     }
+
     @Test
     @DisplayName("Checking variable assignments from constructor methods are not accurate")
     void checkingVariablesAccuracy(){
@@ -21,4 +22,5 @@ class BankAccountTest {
         assertEquals("Patrick", ba.getName());
         assertEquals(69.69, ba.getBalance());
     }
+
 }

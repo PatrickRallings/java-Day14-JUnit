@@ -19,4 +19,20 @@ public class Transfer {
             System.out.println(this.sender + " balance does not meet the requirements of this transaction.");
         }
     }
+
+    public BankAccount getSender() {
+        return sender;
+    }
+
+    public BankAccount getReceiver() {
+        return receiver;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public boolean isTransferCompleted() {
+        return transferCompleted;
+    }
 }
