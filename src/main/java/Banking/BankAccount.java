@@ -17,4 +17,12 @@ public class BankAccount {
     public void getAccount() {
         System.out.println("Account Holder: "+this.name+"\nBalance: "+this.balance);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
 }
