@@ -2,7 +2,6 @@ package Banking;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class TransferTest {
@@ -42,7 +41,7 @@ class TransferTest {
     @DisplayName("Checking sender's balance has decreased by the transfer amount")
     void checkingSenderPostBalance(){
         double preTransferSenderBalance= t.getSender().getBalance();
-        t.send();;
+        t.send();
         assertEquals(preTransferSenderBalance - t.getAmount(), t.getSender().getBalance());
     }
 
@@ -50,7 +49,7 @@ class TransferTest {
     @DisplayName("Checking receiver's balance has increased by the transfer amount")
     void checkingReceiverPostBalance(){
         double preTransferReceiverBalance= t.getReceiver().getBalance();
-        t.send();;
+        t.send();
         assertEquals(preTransferReceiverBalance + t.getAmount(), t.getReceiver().getBalance());
     }
 }
