@@ -14,16 +14,26 @@ class BankAccountTest {
         ba = new BankAccount("Patrick", 69.69);
     }
     @Test
-    @DisplayName("Checking variable assignments from constructor methods are not null")
-    void checkingVariablesExist(){
+    @DisplayName("Checking object, when instantiated, exists ")
+    void checkingObjectExist(){
         assertNotNull(ba);
+    }
+
+    @Test
+    @DisplayName("Checking the String name in object, when instantiated with argument, exists ")
+    void checkingNameExist(){
         assertNotNull(ba.getName());
     }
 
     @Test
-    @DisplayName("Checking variable assignments from constructor methods are not accurate")
-    void checkingVariablesAccuracy(){
+    @DisplayName("Checking accuracy of assigned name")
+    void checkingNameAccuracy(){
         assertEquals("Patrick", ba.getName());
+    }
+
+    @Test
+    @DisplayName("Checking accuracy of assigned initial balance")
+    void checkingBalanceAccuracy(){
         assertEquals(69.69, ba.getBalance());
     }
 
